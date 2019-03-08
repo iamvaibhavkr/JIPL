@@ -274,6 +274,20 @@ input:hover,
   opacity: 1;
 }
 
+input[type=text], input[type=password], input[type=email] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+}
+
+input[type=text]:focus, input[type=password]:focus, , input[type=email]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
 /* add appropriate colors to fb, twitter and google buttons */
 .fb {
   background-color: #3B5998;
@@ -414,14 +428,14 @@ input[type=submit]:hover {
 <!-- Login/Signup Form -->
 
  <div class="container">
-  <form action="/action_page.php">
+  <form action="signin.php" method="POST">
     <div class="row">
-      <h2 style="text-align:center">Login with Social Media or Manually</h2>
-      <div class="vl">
+      <h2 style="text-align:center">Login</h2>
+      <!-- <div class="vl">
         <span class="vl-innertext">or</span>
-      </div>
+      </div> -->
 
-      <div class="col">
+      <!-- <div class="col">
         <a href="#" class="fb btn">
           <i class="fa fa-facebook fa-fw"></i> Login with Facebook
         </a>
@@ -437,8 +451,8 @@ input[type=submit]:hover {
         <div class="hide-md-lg">
           <p>Or sign in manually:</p>
         </div>
-
-        <input type="text" name="username" placeholder="Username" required>
+ -->
+        <input type="email" name="username" placeholder="Username" required>
         <input type="password" name="password" placeholder="Password" required>
         <input type="submit" value="Login">
       </div>
